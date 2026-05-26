@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import "./assets/sass/main.scss";
+import Header from "./components/layout/header";
+import Footer from "./components/layout/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,8 +17,13 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
     >
-      <body>{children}</body>
+      <body>
+        <Header />
+        {children}
+        {/* <Footer /> */}
+      </body>
     </html>
   );
 }

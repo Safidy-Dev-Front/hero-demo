@@ -1,16 +1,19 @@
 .sections-hero{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     .wrapper{
         .title{
-              font-variation-settings:
-                "wght" 150,
-                "wdth" 60;
-                font-size:30vw;
-                text-transform: uppercase;
-                text-align: center;
-                line-height: 26vw;
+            font-variation-settings: "wght" 387, "wdth" 60;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 22vw;
+            line-height: 27vw;
                 .big-chairs{
                     font-variation-settings:
-                    "wght" 150,
+                    "wght" 387,
                     "wdth" 144;
                 }
         }
