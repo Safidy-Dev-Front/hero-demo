@@ -11,6 +11,10 @@
             text-align: center;
             font-size: 22vw;
             line-height: 27vw;
+            // État de départ de l'intro : GSAP révèle le titre (autoAlpha)
+            // à la fin de la séquence de chargement.
+            opacity: 0;
+            visibility: hidden;
                 .big-chairs{
                     font-variation-settings:
                     "wght" 387,
@@ -18,4 +22,11 @@
                 }
         }
     }
+}
+.wrapper-canvas{
+    position: fixed;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
 }

@@ -40,3 +40,16 @@
         }
     }
 }
+// État de départ des textes d'en-tête pendant l'intro. Scopé aux pages qui
+// portent le hero (seul lui joue la séquence) : ailleurs l'en-tête reste
+// visible normalement.
+body:has(.sections-hero){
+    .create-header{
+        .logo-part h4,
+        .nav-item{
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+        }
+    }
+}

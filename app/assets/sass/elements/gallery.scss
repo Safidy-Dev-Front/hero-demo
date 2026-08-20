@@ -1,0 +1,40 @@
+// Écran de chargement de la galerie : compteur + barre de progression,
+// posé au-dessus du canvas le temps que les textures arrivent.
+.gallery-loader{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background: var(--background);
+    color: var(--foreground);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+
+    &__count{
+        font-size: 12vw;
+        line-height: 1;
+        text-transform: uppercase;
+        font-variation-settings:
+            "wght" 387,
+            "wdth" 60;
+    }
+
+    &__bar{
+        display: block;
+        width: min(320px, 60vw);
+        height: 2px;
+        background: color-mix(in srgb, var(--foreground) 20%, transparent);
+        overflow: hidden;
+
+        i{
+            display: block;
+            height: 100%;
+            background: var(--foreground);
+            transform-origin: left center;
+            transform: scaleX(0);
+            transition: transform .25s ease-out;
+        }
+    }
+}
